@@ -15,5 +15,5 @@ sudo screen --help >/dev/null 2>&1 || sudo apt install qemu-system-mips screen -
 sudo qemu-system-mips -M malta -kernel vmlinux-3.2.0-4-4kc-malta -hda debian_wheezy_mips_standard.qcow2 -append "root=/dev/sda1" -nographic -redir tcp:2222::22 -m 1024 >/dev/null 2>&1 &
 
 #kill "$(ps aux | grep debian.*.mips | awk '{print $2}' | sed -n '1p')"
-echo -e 'use -> kill "'"\$(ps aux | grep debian.*.mips | awk '{print \$2}' | sed -n '1p'"')"'
+echo -e '\nuse -> kill "'"\$(ps aux | grep debian.*.mips | awk '{print \$2}' | sed -n '1p'"')"\n'
 echo -e '\nuse -> ssh -P 2222 root@127.0.0.1\n'
